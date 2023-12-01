@@ -1,0 +1,138 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(#675D92 10%, transparent 10%),
+            radial-gradient(#876198 10%, transparent 10%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    font-family: 'Gasoek One', sans-serif;
+}
+
+.main-body
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 1rem;
+}
+
+.header
+{
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.navBar-grid
+{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+}
+
+.page-title-grid
+{
+    
+    height: 100%;
+    grid-column: 1 /span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-title-grid > h1
+{
+    margin: 0px;
+    font-size: 4rem;
+    background: linear-gradient(to right, #675D92, #876198);
+        -webkit-background-clip: text;
+        color: transparent;
+    -webkit-text-stroke: 1px black;
+}
+
+.add-new-grid
+{
+    border-radius: 1px solid black;
+    grid-column: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #675D92;
+    padding: 1.5em 2.5em;
+    border: none;
+    border-radius: .8rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border:1px solid black;
+}
+
+button span:not(:nth-child(6)) 
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 25px;
+    width: 25px;
+    background-color: #876198;
+    border-radius: 50%;
+    transition: .6s ease;
+}
+
+button span:nth-child(6) 
+{
+    position: relative;
+}
+
+button span:nth-child(1) 
+{
+    transform: translate(-3.3em, -4em);
+}
+
+button span:nth-child(2) 
+{
+    transform: translate(-6em, 1.3em);
+}
+
+button span:nth-child(3) 
+{
+    transform: translate(-.2em, 1.8em);
+}
+
+button span:nth-child(4) 
+{
+    transform: translate(3.5em, 1.4em);
+}
+
+button span:nth-child(5) 
+{
+    transform: translate(3.5em, -3.8em);
+}
+
+button:hover span:not(:nth-child(6)) 
+{
+    transform: translate(-50%, -50%) scale(4);
+    transition: 1.5s ease;
+}
+
+.mainContent
+{
+    grid-column: 1 / span 5 ;
+    grid-row: 2 / span 4;
+}
