@@ -19,14 +19,7 @@
                     <h1 class="highlight">The Library App</h1>
                 </div>
                 <div class="add-new-grid">
-                    <button class="add-btn">
-                        <span class="circle1"></span>
-                        <span class="circle2"></span>
-                        <span class="circle3"></span>
-                        <span class="circle4"></span>
-                        <span class="circle5"></span>
-                        <span class="text">Add new Books</span>
-                    </button>
+                    <button class="add-btn" onclick="showForm()">Add New Books</button>
                 </div>
             </div>
         </div>
@@ -44,6 +37,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class = "hidden" id="popup">
+            <form class="form">
+                <span class="title">Enter the details of the Book.</span>
+                <div class="form-container">
+                    <input type="text" class="input" placeholder="Name of the book" autocomplete="off">
+			        <input type="text" class="input" placeholder="Author of the book" autocomplete="off">
+			        <input type="text" class="input" placeholder="Number of pages" autocomplete="off">
+                </div>
+                <button>Have you read the book?</button>
+            </form>
         </div>
     </div>
     <script src="./script.js"></script>
