@@ -23,17 +23,18 @@ function handleFormData()
     var bookName = document.getElementById("bookName").value;
     var authorName = document.getElementById("authorName").value;
     var pageNumber = document.getElementById("numberOfPages").value;
-    var readTheBookOrNot = document.querySelector('input[name="yes_no"]:checked').value;
-
-    console.log("The name of the book : "+bookName);
-    console.log("The name of the author : "+authorName);
-    console.log("Number of pages : "+pageNumber);
-    console.log("Read the book or not : "+readTheBookOrNot);
+    var radioChecked = document.querySelector('input[name="yes_no"]:checked');
+    var readTheBookOrNot = radioChecked ? radioChecked.value : "Not Specified";
+    books.push(new Book (bookName,authorName,pageNumber,readTheBookOrNot));
+    console.log(books[books.length - 1]);
 }
 
-function Book(name,author,page)
+var books = [];
+
+function Book(name,author,page,readStatus)
 {
     this.name = name;
     this.author = author;
     this.page = page;
+    this.readStatus = readStatus;
 }
