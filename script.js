@@ -76,7 +76,7 @@ function createBookElement(book)
     btnContainer.classList.add("book-btn");
 
     var readButton = document.createElement("button");
-    readButton.classList.add("read-btn")
+    readButton.classList.add("read-btn");
     if(book.readStatus === "Yes")
     {
         readButton.textContent = "Read";
@@ -94,8 +94,8 @@ function createBookElement(book)
     });
 
     var removeButton = document.createElement("button");
+    removeButton.classList.add("remove-btn");
     removeButton.textContent = "Remove";
-
     btnContainer.appendChild(readButton);
     btnContainer.appendChild(removeButton);
 
