@@ -56,9 +56,9 @@ body
 .add-new-grid
 {
     border-radius: 1px solid black;
-    grid-column: 5;
+    grid-column: 4;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -87,6 +87,43 @@ body
     transform: translateY(4px);
 }
 
+.github-icon-grid
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center ;
+}
+
+.github-svg-logo
+{
+    width: 40px;
+    margin-right: 40px;
+    transition: transform 0.3s ease;
+}
+
+.github-svg-logo:hover 
+{
+    animation: rotateAnimation 4s linear infinite;
+}
+
+.github-svg-logo:active 
+{
+    transform: translateY(4px);
+}
+
+@keyframes rotateAnimation 
+{
+    from 
+    {
+        transform: rotate(0deg);
+    }
+
+    to 
+    {
+        transform: rotate(360deg);
+    }
+}
+
 .mainContent
 {
     grid-column: 1 / span 5 ;
@@ -98,7 +135,7 @@ body
 
 .book-template-grid
 {
-    height: 100%;
+    height: 95%;
     width: 98%;
     display: grid;
     grid-template-columns: repeat(5,1fr);
