@@ -62,11 +62,11 @@ function createBookElement(book)
 
     var authorParagraph = document.createElement("p");
     authorParagraph.classList.add("author");
-    authorParagraph.textContent = book.author;
+    authorParagraph.textContent = "by "+book.author;
 
     var pageParagraph = document.createElement("p");
     pageParagraph.classList.add("pages");
-    pageParagraph.textContent = book.page;
+    pageParagraph.textContent = book.page+" pages";
 
     detailsContainer.appendChild(titleParagraph);
     detailsContainer.appendChild(authorParagraph);
@@ -96,6 +96,10 @@ function createBookElement(book)
     var removeButton = document.createElement("button");
     removeButton.classList.add("remove-btn");
     removeButton.textContent = "Remove";
+    removeButton.addEventListener("click",function(){
+        removeBook(removeButton);
+    });
+
     btnContainer.appendChild(readButton);
     btnContainer.appendChild(removeButton);
 
@@ -117,5 +121,14 @@ function changeReadStatus(button)
     {
         button.textContent = "Read";
         button.style.backgroundColor = "#ABF94D";
+    }
+}
+
+function removeBook(button)
+{
+    var selectedBookDiv = button.closest('.book');
+    if(selectedBookDiv)
+    {
+        selectedBookDiv.remove();
     }
 }
