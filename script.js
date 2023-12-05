@@ -39,6 +39,13 @@ function handleFormData()
     books.push(newBook);
     createBookElement(newBook);
     hideForm();
+    document.getElementById("bookName").value="";
+    document.getElementById("authorName").value="";
+    document.getElementById("numberOfPages").value="";
+    var radioButtons = document.querySelectorAll('input[name="yes_no"]');
+    radioButtons.forEach(function(radioButton){
+        radioButton.checked = false;
+    });
 }
 
 function createBookElement(book) 

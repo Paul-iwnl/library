@@ -46,13 +46,11 @@ body
 
 .page-title-grid > h1
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: bolder;
     margin: 0px;
     font-size: 6rem;
-    background: linear-gradient(to right, #F71360, #FAF675);
-        -webkit-background-clip: text;
-        color: transparent;
+    color: black;
 }
 
 .add-new-grid
@@ -110,7 +108,7 @@ body
 
 .book
 {
-    background: rgba(250,246,117,0.5);
+    background: white;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
