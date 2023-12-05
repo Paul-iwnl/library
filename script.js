@@ -2,13 +2,20 @@
 document.getElementById('submitButton').addEventListener('click', function(event){
     event.preventDefault();
     handleFormData();
-} )
+    hideForm();
+} );
 
 function showForm()
 {
     var popup = document.getElementById("popup");
     popup.style.display = "block";
 
+}
+
+function hideForm() 
+{
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
 }
 
 function handleFormData()
@@ -22,4 +29,11 @@ function handleFormData()
     console.log("The name of the author : "+authorName);
     console.log("Number of pages : "+pageNumber);
     console.log("Read the book or not : "+readTheBookOrNot);
+}
+
+function Book(name,author,page)
+{
+    this.name = name;
+    this.author = author;
+    this.page = page;
 }
