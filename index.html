@@ -38,15 +38,24 @@
                 </div>
             </div>
         </div>
-        <div class = "hidden" id="popup">
+        <div class = "hidden form-box" id="popup">
             <form class="form">
                 <span class="title">Enter the details of the Book.</span>
+                <br>
                 <div class="form-container">
-                    <input type="text" class="input" placeholder="Name of the book" autocomplete="off">
-			        <input type="text" class="input" placeholder="Author of the book" autocomplete="off">
-			        <input type="text" class="input" placeholder="Number of pages" autocomplete="off">
+                    <label for ="bookName">Name of the book :</label>
+                    <input type="text" id="bookName" class="input" autocomplete="off" required>
+                    <label for ="authorName">Name of the author :</label>
+			        <input type="text" id="authorName" class="input" autocomplete="off" required>
+                    <label for ="numberOfPages">Enter the number of pages :</label>
+			        <input type="text" class="input" id="numberOfPages" autocomplete="off" required>
+                    <label for ="readTheBookOrNot">Have you read the book ?</label>
+                    <div class="yesNo">
+                        <input type="radio" name="yes_no" checked>Yes</input>
+                        <input type="radio" name="yes_no" checked>No</input>
+                    </div>
                 </div>
-                <button>Have you read the book?</button>
+                <button>Submit</button>
             </form>
         </div>
     </div>

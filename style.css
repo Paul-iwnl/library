@@ -3,13 +3,10 @@ body
 {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    padding: 0px;
-    background-color: #FFFFFF;
-    background-image: radial-gradient(#B6F38B 10%, transparent 10%),
-            radial-gradient(#56EDAA 10%, transparent 10%);
-    background-size: 100px 100px;
-    background-position: 0 0, 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F4F5F8;
 }
 
 .main-body
@@ -49,14 +46,13 @@ body
 
 .page-title-grid > h1
 {
-    font-family: 'UnifrakturCook', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     margin: 0px;
     font-size: 6rem;
-    background: linear-gradient(to right, #9E26E8, #56EDAA);
+    background: linear-gradient(to right, #F71360, #FAF675);
         -webkit-background-clip: text;
         color: transparent;
-    -webkit-text-stroke: 4px black;
 }
 
 .add-new-grid
@@ -73,7 +69,7 @@ body
     width: 55%;
     height: 60px;
     border-radius: 25px;
-    background-color: #56EDAA;
+    background-color: #ABF94D;
     color: white;
     border-style: hidden;
     font-size: 100%;
@@ -84,8 +80,7 @@ body
 
 .add-btn:hover 
 {
-    background-color: #9E26E8;
-    color: white;
+    background-color: #FAF675;
     transform: translateY(-4px);
 }
 
@@ -115,7 +110,7 @@ body
 
 .book
 {
-    background: rgba(182, 243, 139, 0.8);
+    background: rgba(250,246,117,0.5);
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -124,6 +119,7 @@ body
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: bolder;
+    border: 2px solid black;
 }
 
 .book-btn
@@ -138,7 +134,7 @@ body
     width: 35%;
     height: 40px;
     border-radius:25px;
-    background-color: #56EDAA;
+    background-color: #ABF94D;
     color: white;
     border-style: hidden;
     font-size: 75%;
@@ -149,8 +145,7 @@ body
 
 .book-btn>button:hover
 {
-    background-color: #9E26E8;
-    color:white;
+    background-color: #FAF675;
     transform: translateY(-4px);
 }
 
@@ -182,4 +177,106 @@ body
 .hidden
 {
     display: none;
+}
+
+.form-box {
+    max-width: 300px;
+    background: #f1f7fe;
+    overflow: hidden;
+    border-radius: 16px;
+    color: #010101;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+
+}
+
+/*Form text*/
+.title 
+{
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.subtitle 
+{
+    font-size: 1rem;
+    color: #666;
+}
+
+/*Inputs box*/
+.form-container 
+{
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 1rem 0 .5rem;
+    width: 100%;
+}
+
+.input 
+{
+    background: none;
+    border: 0;
+    outline: 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-size: .9rem;
+    padding: 8px 15px;
+}
+
+.form-section 
+{
+    padding: 16px;
+    font-size: .85rem;
+    background-color: #e0ecfb;
+    box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a 
+{
+    font-weight: bold;
+    color: #0066ff;
+    transition: color .3s ease;
+}
+
+.form-section a:hover 
+{
+    color: #ABF94D;
+    text-decoration: underline;
+}
+
+/*Button*/
+.form button 
+{
+    background-color:#ABF94D;
+    color: black;
+    border: 0;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.form button:hover 
+{
+    background-color: #FAF675;
+}
+
+.yesNo
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
