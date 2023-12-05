@@ -1,14 +1,24 @@
+function Book(name, author, page, readStatus) 
+{
+  this.name = name;
+  this.author = author;
+  this.page = page;
+  this.readStatus = readStatus;
+}
 
-document.getElementById('submitButton').addEventListener('click', function(event){
+var books = [];
+
+
+document.getElementById("submitButton").addEventListener("click", function (event) 
+{
     event.preventDefault();
     handleFormData();
-} );
+});
 
-function showForm()
+function showForm() 
 {
     var popup = document.getElementById("popup");
     popup.style.display = "block";
-
 }
 
 function hideForm() 
@@ -17,23 +27,22 @@ function hideForm()
     popup.style.display = "none";
 }
 
-function handleFormData()
+function handleFormData() 
 {
     var bookName = document.getElementById("bookName").value;
     var authorName = document.getElementById("authorName").value;
     var pageNumber = document.getElementById("numberOfPages").value;
     var radioChecked = document.querySelector('input[name="yes_no"]:checked');
     var readTheBookOrNot = radioChecked ? radioChecked.value : "Not Specified";
-    
+
     var newBook = new Book(bookName, authorName, pageNumber, readTheBookOrNot);
     books.push(newBook);
     createBookElement(newBook);
     hideForm();
 }
 
-function createBookElement(book)
+function createBookElement(book) 
 {
-    
     var bookContainer = document.createElement("div");
     bookContainer.classList.add("book");
 
@@ -60,7 +69,22 @@ function createBookElement(book)
     btnContainer.classList.add("book-btn");
 
     var readButton = document.createElement("button");
-    readButton.textContent = "Read";
+    readButton.classList.add("read-btn")
+    if(book.readStatus === "Yes")
+    {
+        readButton.textContent = "Read";
+        readButton.style.backgroundColor = "#ABF94D";
+    }
+
+    else
+    {
+        readButton.textContent = "Not Read";
+        readButton.style.backgroundColor = "#F08080";
+    }
+
+    readButton.addEventListener("click", function(){
+        changeReadStatus(readButton);
+    });
 
     var removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
@@ -71,16 +95,20 @@ function createBookElement(book)
     bookContainer.appendChild(detailsContainer);
     bookContainer.appendChild(btnContainer);
 
-    document.querySelector('.book-template-grid').appendChild(bookContainer);
-
+    document.querySelector(".book-template-grid").appendChild(bookContainer);
 }
 
-var books = [];
-
-function Book(name,author,page,readStatus)
+function changeReadStatus(button)
 {
-    this.name = name;
-    this.author = author;
-    this.page = page;
-    this.readStatus = readStatus;
+    if (button.textContent === "Read")
+    {
+        button.textContent = "Not Read";
+        button.style.backgroundColor = "#F08080";
+    }
+
+    else
+    {
+        button.textContent = "Read";
+        button.style.backgroundColor = "#ABF94D";
+    }
 }
