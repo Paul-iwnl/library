@@ -132,3 +132,17 @@ function removeBook(button)
         selectedBookDiv.remove();
     }
 }
+
+
+//AWS stuff
+
+// Initialize AWS Cognito
+AWSCognito.config.region = "ap-south-1";
+
+// Set up User Pool
+var poolData = {
+  UserPoolId: "ap-south-1_iH0zRZR9G",
+  ClientId: "fg14510sk4nbco2fmph313s3u",
+};
+
+var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
