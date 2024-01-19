@@ -27,6 +27,18 @@ function hideForm()
     popup.style.display = "none";
 }
 
+function signupForm()
+{
+    var popupSignUpForm = document.getElementById("sign-up-popup");
+    popupSignUpForm.style.display = "block";
+}
+
+function loginForm()
+{
+    var popupLoginForm = document.getElementById("log-in-popup");
+    popupLoginForm.style.display = "block";
+}
+
 function handleFormData() 
 {
     var bookName = document.getElementById("bookName").value;

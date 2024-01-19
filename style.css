@@ -53,18 +53,75 @@ body
     color: black;
 }
 
-.add-new-grid
+.sign-up-log-in-grid
 {
     border-radius: 1px solid black;
     grid-column: 4;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.add-btn
+.sign-up-btn 
 {
-    width: 55%;
+    width: 45%;
+    height: 60px;
+    border-radius: 25px;
+    background-color: #ABF94D;
+    color: white;
+    border-style: hidden;
+    font-size: 100%;
+    font-weight: 700;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.sign-up-btn:hover 
+{
+    background-color: #FAF675;
+    transform: translateY(-4px);
+}
+
+.sign-up-btn:active 
+{
+    transform: translateY(4px);
+}
+
+.log-in-btn
+{
+    width: 45%;
+    height: 60px;
+    border-radius: 25px;
+    background-color: #ABF94D;
+    color: white;
+    border-style: hidden;
+    font-size: 100%;
+    font-weight: 700;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.log-in-btn:hover 
+{
+    background-color: #FAF675;
+    transform: translateY(-4px);
+}
+
+.log-in-btn:active 
+{
+    transform: translateY(4px);
+}
+
+.github-icon-add-new-button-grid
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center ;
+}
+
+.add-btn 
+{
+    width: 100%;
     height: 60px;
     border-radius: 25px;
     background-color: #ABF94D;
@@ -83,38 +140,6 @@ body
 }
 
 .add-btn:active 
-{
-    transform: translateY(4px);
-}
-
-.github-icon-sign-up-button-grid
-{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center ;
-}
-
-.sign-up-btn
-{
-    width: 100%;
-    height: 60px;
-    border-radius: 25px;
-    background-color: #ABF94D;
-    color: white;
-    border-style: hidden;
-    font-size: 100%;
-    font-weight: 700;
-    color: black;
-    transition: transform 0.3s ease;
-}
-
-.sign-up-btn:hover
-{
-    background-color: #FAF675;
-    transform: translateY(-4px);
-}
-
-.sign-up-btn:active
 {
     transform: translateY(4px);
 }
@@ -214,6 +239,32 @@ body
 }
 
 #popup 
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#sign-up-popup 
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#log-in-popup
 {
     display: none;
     position: fixed;

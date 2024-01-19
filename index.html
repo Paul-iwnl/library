@@ -17,12 +17,14 @@
                 <div class="page-title-grid">
                     <h1 class="highlight">The Library App</h1>
                 </div>
-                <div class="add-new-grid">
-                    <button class="add-btn" onclick="showForm()">Add New Books</button>
+                <div class="sign-up-log-in-grid">
+                    <button class="sign-up-btn" onclick="signupForm()">Sign up</button>
+                    <button class="log-in-btn" onclick="loginForm()">Log in</button>
+
                 </div>
-                <div class="github-icon-sign-up-button-grid">
+                <div class="github-icon-add-new-button-grid">
                     <div class="sign-up-log-in-btn">
-                        <button class="sign-up-btn">Sign up / Log in</button>
+                        <button class="add-btn" onclick="showForm()">Add New Books</button>
                     </div>
                     <a href="https://github.com/Paul-iwnl/library" class="github-icon-div">
                         <img src="./images/github-mark.svg" href="www.google.com" class="github-svg-logo">
@@ -54,6 +56,38 @@
                 <button type="submit" id="submitButton">Submit</button>
             </form>
         </div>
+
+        <div class="hidden form-box" id="sign-up-popup">
+            <form class="form">
+                <span class="title">Sign Up</span>
+                <br>
+                <div class="form-container">
+                    <label for ="email">Enter your email :</label>
+                    <input type="text" id="email" class="input" autocomplete="off" required>
+                    <label for ="username">Enter your User Name</label>
+                    <input type="text" id="username" class="input" autocomplete="off" required>
+                    <label for="password">Enter your password :</label>
+                    <input type="password" id="password" class="input" autocomplete="off" required>
+                    <button type="submit" id="submitButton">Sign Up</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="hidden form-box" id="log-in-popup">
+            <form class="form">
+                <span class="title">Sign Up</span>
+                <br>
+                <div class="form-container">
+                    <label for ="username">Enter your User Name</label>
+                    <input type="text" id="username" class="input" autocomplete="off" required>
+                    <label for="password">Enter your password :</label>
+                    <input type="password" id="password" class="input" autocomplete="off" required>
+                    <button type="submit" id="submitButton">Log in</button>
+                </div>
+            </form>
+        </div>
+
+
     </div>
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.1140.0/aws-sdk.min.js"></script>
